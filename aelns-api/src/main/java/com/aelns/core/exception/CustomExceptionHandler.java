@@ -62,7 +62,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 			request.setAttribute("javax.servlet.error.exception", ex, WebRequest.SCOPE_REQUEST);
 		}
 
-		return new ResponseEntity<Object>(body, headers, status);
+		return new ResponseEntity<>(body, headers, status);
 	}
 
 	public void logError(Exception ex) {
