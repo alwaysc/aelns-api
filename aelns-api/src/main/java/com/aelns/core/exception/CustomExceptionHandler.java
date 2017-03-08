@@ -1,10 +1,8 @@
 package com.aelns.core.exception;
 
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
 import com.aelns.core.support.MediaTypes;
+import com.aelns.core.utils.mapper.JsonMapper;
+import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -16,9 +14,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import com.aelns.core.utils.mapper.JsonMapper;
 
-import com.google.common.collect.Maps;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @ControllerAdvice(annotations = { RestController.class })
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
@@ -46,7 +44,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 		headers.setContentType(MediaType.parseMediaType(MediaTypes.JSON_UTF_8));
 		ErrorResult result = new ErrorResult(HttpStatus.INTERNAL_SERVER_ERROR.value(),
 				HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase());
-		return new ResponseEntity<ErrorResult>(result, headers, HttpStatus.INTERNAL_SERVER_ERROR);
+		return new ResponseEntity<>(result, headers, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	/**
