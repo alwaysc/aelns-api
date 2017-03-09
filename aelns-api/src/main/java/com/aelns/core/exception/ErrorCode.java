@@ -1,21 +1,49 @@
 package com.aelns.core.exception;
 
+/**
+ * @author aelns
+ *
+ */
 public enum ErrorCode {
+	ARGUMENTS_INCORRECT("10001", "参数不正确"),
+	TIMEOUT_CALL("10002", "API调用超时"),
+	INVALI_ACCESS_TOKEN("10010", "请重新登录"),
+	INVALID_OPRATION("10013", "无效的操作"),
+	INTERNAL_SERVER_ERROR("10014", "服务器内部错误"),
+	USER_NAME_NOT_EXIST("10018", "用户名不存在"),
+	INVALID_PASSWORD("10019", "密码错误"),
 
-    BAD_REQUEST(400, 400),
-    UNAUTHORIZED(401, 401),
-    FORBIDDEN(403, 403),
-    INTERNAL_SERVER_ERROR(500, 500),
-    BOOK_STATUS_WRONG(1100, 400),
-    BOOK_OWNERSHIP_WRONG(1101, 403),
-    NO_TOKEN(1102, 401);
+	MESSAGE_QUENE_SEND_ERROR("20001","消息队列发送失败"),
+	REDIS_ERROR("20002","Redis异常"),
+	;
+	
+	private String code;
+	private String message;
+	
+	private ErrorCode(String code, String reasoning) {
+		this.code = code;
+		this.message = reasoning;
+	}
 
-    public int code;
-    public int httpStatus;
+	/**
+	 * @return the code
+	 */
+	public String getCode() {
+		return code;
+	}
 
-    ErrorCode(int code, int httpStatus) {
-        this.code = code;
-        this.httpStatus = httpStatus;
-    }
+	/**
+	 * @param code the code to set
+	 */
+	public void setCode(String code) {
+		this.code = code;
+	}
 
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 }
