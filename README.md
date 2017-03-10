@@ -1,5 +1,5 @@
 # 项目介绍
-    aelns API是一个使用Spring Boot技术选型, 可以直接应用到生产环节的rest API构建脚手架,
+    aelns API是一个使用Spring Boot技术选型, 可以直接应用到生产环境的rest API构建脚手架,
     精心处理了一个Web框架"需要有的东西", 帮助大家学习Spring Boot和提高开发效率
 
 
@@ -26,6 +26,8 @@
 
     11) springloaded支持
 
+    12) springside4中集各家之大成的Utils
+
 ## Quick Start
      1) 初始化数据库, 在你自己的MySQL中执行/resource/city.sql
 
@@ -35,4 +37,4 @@
 ### 参考
    1) http://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/reference/htmlsingle/
    2) http://stackoverflow.com/questions/**
-   3)
+   3) https://github.com/springside/springside4
