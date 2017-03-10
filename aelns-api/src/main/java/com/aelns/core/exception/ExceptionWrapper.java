@@ -25,7 +25,7 @@ public class ExceptionWrapper {
     /**
      * 如果是Application错误, 返回简单的message信息<br/>
      * 如果是客户端参数有问题, 统一返回参数错误编码 @see ErrorCode.ARGUMENTS_INCORRECT <br/>
-     * 如果是服务器异常, 返回简单的message, 另外根据application.properties配置的参数$("{aelns.exception.print.stack.trace}")<br/>
+     * 如果是服务器异常, 返回简单的message, 另外根据application.properties配置的参数$("{aelns.exception.trace}")<br/>
      * 决定是否返回详细的错误堆栈信息<br>
      *
      *  TODO 这里的代码有点丑陋, 也许用设计模式解决更加好
