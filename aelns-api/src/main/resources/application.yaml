@@ -9,6 +9,7 @@ server:
 # trace application
 trace: false
 
+
 # spring
 spring:
     profiles:
@@ -45,5 +46,13 @@ spring:
               remove-abandoned: true
               remove-abandoned-timeout: 180
               jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+mybatis:
+  type-aliases-package: com.aelns.model
+  mapper-locations: classpath*:/com/aelns/dao/mapper/*.xml
+  check-config-location: true
+  config-location: classpath:mybatis-config.xml
+
+
+
 
 
