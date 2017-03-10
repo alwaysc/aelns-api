@@ -1,0 +1,49 @@
+# project
+application:
+    title: aelns API
+    version: 0.0.2
+# monitor port
+server:
+    port: 8080
+
+# trace application
+trace: false
+
+# spring
+spring:
+    profiles:
+        active: local
+    output:
+        ansi:
+            enabled: ALWAYS
+    mvc:
+        date-format: yyyy-MM-dd HH:mm:ss
+        dispatch-trace-request: true
+        throw-exception-if-no-handler-found: true
+        static-path-pattern: /static
+    freemarker:
+        check-template-location: false
+    jmx:
+        enabled: false
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        tomcat:
+              max-active: 500
+              test-on-borrow: false
+              maxWait: 4000
+              jmx-enabled: false
+              test-while-idle: true
+              test-on-return: false
+              validation-interval: 30000
+              validation-query: SELECT 1
+              time-between-eviction-runs-millis: 30000
+              initial-size: 5
+              min-evictable-idle-time-millis: 30000
+              max-idle: 100
+              min-idle: 50
+              log-abandoned: false
+              remove-abandoned: true
+              remove-abandoned-timeout: 180
+              jdbc-interceptors: org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+
+

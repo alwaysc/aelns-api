@@ -1,8 +1,10 @@
 package com.aelns.core.exception;
 
 /**
- * @author aelns
  *
+ * 自定义的异常编码
+ *
+ * @author aelns
  */
 public enum ErrorCode {
 	ARGUMENTS_INCORRECT("10001", "参数不正确"),
@@ -10,6 +12,7 @@ public enum ErrorCode {
 	INVALI_ACCESS_TOKEN("10010", "请重新登录"),
 	INVALID_OPRATION("10013", "无效的操作"),
 	INTERNAL_SERVER_ERROR("10014", "服务器内部错误"),
+	PAGE_NOT_FOUND("10015", "请求的地址不存在"),
 	USER_NAME_NOT_EXIST("10018", "用户名不存在"),
 	INVALID_PASSWORD("10019", "密码错误"),
 

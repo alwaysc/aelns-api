@@ -1,0 +1,22 @@
+# database source
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/dev?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+        username: root
+        password: root
+
+# trace application exceptions
+aelns:
+    exception:
+        trace: true
+
+# logback spring config
+log:
+    path: /logs
+    level: DEBUG
+
+# logging config
+logging:
+    level:
+        com:
+          aelns: DEBUG

@@ -19,15 +19,15 @@ public class SessionFactoryConfig {
     /**
      * mybatis config file
      */
-    private static String MYBATIS_CONFIG = "mybatis-config.xml";
+    private static final String MYBATIS_CONFIG = "mybatis-config.xml";
     /**
      * mybatis mapper resource
      */
-    private static String MAPPER_PATH = "/com/aelns/dao/mapper/*.xml";
+    private static final String MAPPER_PATH = "/com/aelns/dao/mapper/*.xml";
     /**
      * mybatis model resource
      */
-    private String typeAliasPackage = "com.aelns.model";
+    private static final String TYPE_ALIAS_PACKAGE = "com.aelns.model";
 
     @Autowired
     private DataSource dataSource;
@@ -52,7 +52,7 @@ public class SessionFactoryConfig {
         /** 设置datasource */
         sqlSessionFactoryBean.setDataSource(dataSource);
         /** 设置typeAlias 包扫描路径 */
-        sqlSessionFactoryBean.setTypeAliasesPackage(typeAliasPackage);
+        sqlSessionFactoryBean.setTypeAliasesPackage(TYPE_ALIAS_PACKAGE);
         return sqlSessionFactoryBean;
     }
 }

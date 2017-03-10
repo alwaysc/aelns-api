@@ -19,6 +19,7 @@ import java.sql.SQLException;
 @Configuration
 @MapperScan("com.aelns.dao")
 public class MyBatisConfig {
+
     private static final Logger logger = LoggerFactory.getLogger(MyBatisConfig.class);
 
     @Autowired

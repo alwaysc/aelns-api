@@ -1,0 +1,19 @@
+                                    ${AnsiColor.BRIGHT_YELLOW}
+                                    lllllll
+                                    l:::::l
+                                    l:::::l
+                                    l:::::l
+  aaaaaaaaaaaaa      eeeeeeeeeeee    l::::lnnnn  nnnnnnnn        ssssssssss
+  a::::::::::::a   ee::::::::::::ee  l::::ln:::nn::::::::nn    ss::::::::::s
+  aaaaaaaaa:::::a e::::::eeeee:::::eel::::ln::::::::::::::nn ss:::::::::::::s
+           a::::ae::::::e     e:::::el::::lnn:::::::::::::::ns::::::ssss:::::s
+    aaaaaaa:::::ae:::::::eeeee::::::el::::l  n:::::nnnn:::::n s:::::s  ssssss
+  aa::::::::::::ae:::::::::::::::::e l::::l  n::::n    n::::n   s::::::s
+ a::::aaaa::::::ae::::::eeeeeeeeeee  l::::l  n::::n    n::::n      s::::::s
+a::::a    a:::::ae:::::::e           l::::l  n::::n    n::::nssssss   s:::::s
+a::::a    a:::::ae::::::::e         l::::::l n::::n    n::::ns:::::ssss::::::s
+a:::::aaaa::::::a e::::::::eeeeeeee l::::::l n::::n    n::::ns::::::::::::::s
+ a::::::::::aa:::a ee:::::::::::::e l::::::l n::::n    n::::n s:::::::::::ss
+  aaaaaaaaaa  aaaa   eeeeeeeeeeeeee llllllll nnnnnn    nnnnnn  sssssssssss
+  ${AnsiColor.BRIGHT_BLUE}
+  ::: ${application.title} (${application.version}) :::             ＼(^O^)／    Spring-Boot ${spring-boot.version}

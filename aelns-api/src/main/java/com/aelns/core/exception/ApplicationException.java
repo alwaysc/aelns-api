@@ -1,5 +1,8 @@
 package com.aelns.core.exception;
 
+/**
+ * 应用程序的异常, 自定义异常的可以继承这个类别, spring会自动拦截异常信息进行展示
+ */
 public class ApplicationException extends RuntimeException {
 
 	/**

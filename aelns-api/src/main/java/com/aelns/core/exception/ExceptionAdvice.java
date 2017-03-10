@@ -8,19 +8,25 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.NoHandlerFoundException;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
 
+/**
+ *
+ * 统一异常处理
+ *
+ */
 @ResponseBody
 @CrossOrigin
 @Configuration
-@ControllerAdvice(annotations = { RestController.class })
+@ControllerAdvice
 public class ExceptionAdvice {
 
 
-    @Value("${aelns.exception.print.stack.trace}")
+    @Value("${aelns.exception.trace}")
     private boolean printStackTrace;
 
     private static final Logger logger = Logger
@@ -33,6 +39,16 @@ public class ExceptionAdvice {
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ExceptionWrapper handleHttpMessageNotReadableException(
             HttpMessageNotReadableException e) {
+        return wrapperException(e);
+    }
+
+    /**
+     * 404 - Bad Request
+     */
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(NoHandlerFoundException.class)
+    public ExceptionWrapper handleNoHandlerFoundException(
+            NoHandlerFoundException e) {
         return wrapperException(e);
     }
 
@@ -71,15 +87,14 @@ public class ExceptionAdvice {
 
         // print the exception stack trace
         if (printStackTrace) {
-            String exceptionTrace = getFormatStackTrace(e);
-            result.setMessage("服务器内部错误: " + exceptionTrace);
+            result.setMessage(getFormatStackTrace(e));
         }
-        // TODO log the exception for third party storage
         return result;
     }
 
     /**
-     * 获取格式化的错误堆栈信息, 便于阅读
+     * 获取格式化的错误堆栈信息, 提高易读性
+     *
      * @param exception
      * @return
      */
