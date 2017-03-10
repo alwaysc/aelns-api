@@ -35,6 +35,6 @@
 
 
 ### Reference
-   1) http://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/reference/htmlsingle/
-   2) http://stackoverflow.com/questions/**
-   3) https://github.com/springside/springside4
+   1. http://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/reference/htmlsingle
+   2. http://stackoverflow.com/questions/**
+   3. https://github.com/springside/springside4
