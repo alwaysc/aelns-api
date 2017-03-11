@@ -20,6 +20,7 @@ spring:
     mvc:
         date-format: yyyy-MM-dd HH:mm:ss
         dispatch-trace-request: true
+        dispatch-options-request: true
         throw-exception-if-no-handler-found: true
         static-path-pattern: /static
     freemarker:
