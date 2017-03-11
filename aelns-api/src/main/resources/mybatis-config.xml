@@ -9,8 +9,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<setting name="defaultExecutorType" value="REUSE" />
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
-	<typeHandlers>
-		<typeHandler handler="com.github.javaplugs.mybatis.TreeNodeTypeHandler" />
-		<typeHandler handler="com.github.javaplugs.mybatis.JsonNodeValueTypeHandler" />
-	</typeHandlers>
+	<!--<typeHandlers>-->
+		<!--<typeHandler handler="com.github.javaplugs.mybatis.TreeNodeTypeHandler" />-->
+		<!--<typeHandler handler="com.github.javaplugs.mybatis.JsonNodeValueTypeHandler" />-->
+	<!--</typeHandlers>-->
 </configuration>
