@@ -25,10 +25,17 @@ public class ApplicationException extends RuntimeException {
 	}
 	
 	public ApplicationException(String code, String reasoning) {
-		super();
+		super(reasoning);
 		this.code = code;
 		this.reasoning = reasoning;
 	}
+
+	public ApplicationException(ErrorCode errorCode) {
+		super(errorCode.getMessage());
+		this.code = errorCode.getCode();
+		this.reasoning = errorCode.getMessage();
+	}
+
 	/**
 	 * @return the code
 	 */

@@ -15,9 +15,15 @@ public enum ErrorCode {
 	PAGE_NOT_FOUND("10015", "请求的地址不存在"),
 	USER_NAME_NOT_EXIST("10018", "用户名不存在"),
 	INVALID_PASSWORD("10019", "密码错误"),
+	WRONG_PARAMS("10020","参数错误"),
 
 	MESSAGE_QUENE_SEND_ERROR("20001","消息队列发送失败"),
 	REDIS_ERROR("20002","Redis异常"),
+
+	/* 签名 */
+	SIGNATURE_INVALID_APPLICATION("3001", "无效的Application"),
+	SIGNATURE_ERROR("30002","签名验证失败"),
+	SIGNATURE_TIME_OUT("30003","请求已过期")
 	;
 	
 	private String code;
@@ -49,4 +55,5 @@ public enum ErrorCode {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
 }

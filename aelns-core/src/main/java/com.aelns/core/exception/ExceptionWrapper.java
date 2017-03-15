@@ -36,7 +36,7 @@ public class ExceptionWrapper {
             // Application(自定义)异常, 返回简单的message
             ApplicationException exception = (ApplicationException) ex;
             this.code = exception.getCode();
-            this.message = exception.getMessage();
+            this.message = exception.getReasoning();
         } else if (
                 // 客户端参数有问题, 统一返回参数错误编码
                 ex instanceof IllegalArgumentException

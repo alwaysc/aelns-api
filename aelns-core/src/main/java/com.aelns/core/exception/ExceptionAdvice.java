@@ -73,6 +73,15 @@ public class ExceptionAdvice {
     }
 
     /**
+     * 400 - Business exception
+     */
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(ApplicationException.class)
+    public ExceptionWrapper handleApplicationException(Throwable e) {
+        return wrapperException(e);
+    }
+
+    /**
      * 500 - Internal Server Error
      */
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -84,7 +93,6 @@ public class ExceptionAdvice {
     private ExceptionWrapper wrapperException(Throwable e) {
         logger.error(e, e);
         ExceptionWrapper result = new ExceptionWrapper(e);
-
         // print the exception stack trace
         if (printStackTrace) {
             result.setMessage(getFormatStackTrace(e));
