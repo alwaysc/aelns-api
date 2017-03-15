@@ -2,6 +2,8 @@
     aelns API是一个使用Spring Boot技术选型, 可以直接应用到生产环境的rest API构建脚手架,
     精心处理了一个Web框架"需要有的东西", 帮助大家学习Spring Boot和提高开发效率
 
+    你需要有的开发环境: JDK8+  IDEA
+
 
 ## Features
     1) Spring Boot + MyBatis = APIs
@@ -27,6 +29,8 @@
     11) springloaded支持
 
     12) springside4中集各家之大成的Utils
+
+    13) RSA 数据签名验证实现
 
 ### Quick Start
      1) 初始化数据库, 在你自己的MySQL中执行/resource/city.sql
