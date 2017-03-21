@@ -6,13 +6,13 @@ aelns:
 # logback spring config
 log:
     path: /logs
-    level: DEBUG
+    level: INFO
 
 # logging config
 logging:
     level:
         com:
-          aelns: DEBUG
+          aelns: INFO
 
 # trace application
 trace: false
@@ -32,8 +32,6 @@ spring:
         static-path-pattern: /static
     freemarker:
         check-template-location: false
-    jmx:
-        enabled: false
     datasource:
         driverClassName: com.mysql.jdbc.Driver
         url: jdbc:mysql://localhost:3306/prod?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
